@@ -12,7 +12,7 @@ for email verification and Clearbit API for providing additional user informatio
 |        |                        | last_name: Str              |                           |
 |        |                        | password: Str               |                           |
 |        |                        |                             |                           |
-| POST   | /auth/login            | email: Str                  | User registration         |
+| POST   | /auth/login            | email: Str                  | User login                |
 |        |                        | password: Str               |                           |
 |        |                        |                             |                           |
 | GET    | /auth/user             |                             | Get user information      |
@@ -33,11 +33,12 @@ for email verification and Clearbit API for providing additional user informatio
 | GET    | /most_used_ingredients |                             | Get most used ingredients |
 |        |                        |                             | (top 5)                   |
 |        |                        |                             |                           |
-| POST   | /search_recipes        | name: Str                   |                           |
-|        |                        | ingredients: Str            |                           |
+| POST   | /search_recipes        | name: Str                   | Search recipes by name,   |
+|        |                        | ingredients: Str            | text or ingredients       |
+|        |                        | text: Str                   |                           |
 |        |                        |                             |                           |
-| POST   | /filter_recipes        | min_ingredients: Int        |                           |
-|        |                        | max_ingredients: Int        |                           |
+| POST   | /filter_recipes        | min_ingredients: Int        | Filter recipes by max or  |
+|        |                        | max_ingredients: Int        | min number of ingredients |
 
 ### Requirements:
 
