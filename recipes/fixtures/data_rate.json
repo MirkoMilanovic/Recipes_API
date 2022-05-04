@@ -1,0 +1,37 @@
+[
+  {
+    "model": "recipes.rate",
+    "pk": 1,
+    "fields": {
+      "rate": 1
+    }
+  },
+  {
+    "model": "recipes.rate",
+    "pk": 2,
+    "fields": {
+      "rate": 2
+    }
+  },
+  {
+    "model": "recipes.rate",
+    "pk": 3,
+    "fields": {
+      "rate": 3
+    }
+  },
+  {
+    "model": "recipes.rate",
+    "pk": 4,
+    "fields": {
+      "rate": 4
+    }
+  },
+  {
+    "model": "recipes.rate",
+    "pk": 5,
+    "fields": {
+      "rate": 5
+    }
+  }
+]
