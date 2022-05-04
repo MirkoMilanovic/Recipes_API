@@ -16,7 +16,7 @@ class RegisterView(APIView):
             last_name = request.data['last_name']
             password = request.data['password']
         except:
-            raise ParseError('You should provide: email (str), first_name (str), last_name (str) and password (str)!')
+            raise ParseError('You should provide: email, first_name, last_name and password!')
 
         if not isinstance(email, str) == isinstance(name, str) == isinstance(last_name, str) == isinstance(password, str) == True:
             raise ParseError('Make sure that all data have type=str!')
@@ -41,7 +41,7 @@ class LoginView(APIView):
             email = request.data['email']
             password = request.data['password']
         except:
-            raise ParseError('You should provide: email (str) and password (str)!')
+            raise ParseError('You should provide: email and password!')
 
         if not isinstance(email, str) == isinstance(password, str) == True:
             raise ParseError('Make sure that all data have type=str!')
