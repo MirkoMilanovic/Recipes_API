@@ -71,4 +71,5 @@ sudo docker-compose up
 
 ### Note
 
-The constants.py file with API and JWT keys is excluded. Make your own.
+- The constants.py file with API and JWT keys is excluded. Make your own.
+- Ingredients should be written in the plural form (e.x. apples, bananas...)

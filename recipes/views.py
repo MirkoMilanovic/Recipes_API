@@ -17,7 +17,7 @@ class CreateRecipeView(APIView):
             recipe_text = request.data['recipe_text']
             ingredients_list = request.data['ingredients_list']
         except:
-            raise ParseError('You should provide: recipe_name (str), recipe_text (str) and ingredients_list (list(str))!')
+            raise ParseError('You should provide: recipe_name, recipe_text and ingredients_list!')
 
         if not isinstance(recipe_name, str) == isinstance(recipe_text, str) == isinstance(ingredients_list, list) == True or not all(isinstance(ing, str) for ing in ingredients_list):
             raise ParseError('Make sure that: recipe_name (type=str), recipe_text (type=str) and ingredients_list (type=list(str))!')
@@ -71,7 +71,7 @@ class RateRecipeView(APIView):
             recipe_name = request.data['recipe_name']
             recipe_rate = request.data['recipe_rate']
         except:
-            raise ParseError('You should provide: recipe_name (str) and recipe_rate (int(1-5))!')
+            raise ParseError('You should provide: recipe_name and recipe_rate (1-5)!')
 
         if not isinstance(recipe_name, str) == True or recipe_rate not in [1,2,3,4,5]:
             raise ParseError('Make sure that: recipe_name (type=str) and recipe_rate (type=int(1-5)!')
