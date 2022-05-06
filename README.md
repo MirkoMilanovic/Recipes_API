@@ -34,7 +34,7 @@ for email verification and Clearbit API for providing additional user informatio
 |        |                        |                             | (top 5)                   |
 |        |                        |                             |                           |
 | POST   | /search_recipes        | name: Str                   | Search recipes by name,   |
-|        |                        | ingredients: Str            | text or ingredients       |
+|        |                        | ingredients: List(Str)      | text or ingredients       |
 |        |                        | text: Str                   |                           |
 |        |                        |                             |                           |
 | POST   | /filter_recipes        | min_ingredients: Int        | Filter recipes by max or  |
@@ -71,5 +71,10 @@ sudo docker-compose up
 
 ### Note
 
-- The constants.py file with API and JWT keys is excluded. Make your own.
+- The RecipesAPI/constants.py file with API and JWT keys is excluded. Make your own. Example:
+```
+HUNTER_API_KEY = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+CLEARBIT_API_KEY = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+JWT_KEY = 'xxxxxxxxxx'
+```
 - Ingredients should be written in the plural form (e.x. apples, bananas...)
